@@ -39,9 +39,7 @@ jobs:
           - os: macos-latest
             TARGET: macos
             CMD_BUILD: >
-                pyinstaller --onefile -n plex_meta_manager plex_meta_manager.py &&
-                cd dist/ &&
-                zip -r9 plex_meta_manager plex_meta_manager.app/                
+                pyinstaller --onefile -n plex_meta_manager plex_meta_manager.py
             OUT_FILE_NAME: plex_meta_manager.zip
             ASSET_MIME: application/zip
           - os: windows-latest
