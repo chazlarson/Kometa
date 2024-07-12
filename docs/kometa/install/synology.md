@@ -2,6 +2,13 @@
 
 This is a quick walkthrough of setting up the Kometa Docker container in the Synology UI.
 
+This walkthrough does not discuss creating the configuration file.  It only covers getting the container set up.
+
+There are walkthroughs available that will take you through the creation of a basic config file here:
+
+1. [local](../install/local.md)
+2. [Docker](../install/docker.md)
+
 ## Prerequisite: Installing Docker
 
 1.  Open the Package Center app from the Synology Web GUI.
@@ -115,3 +122,7 @@ This is a quick walkthrough of setting up the Kometa Docker container in the Syn
     9.  Select "Apply" to save the "Advanced Settings," select "Next" to go to the Summary, and select "Done" to finish and create the container.
 
         ![](images/dsm6-05.png)
+
+At this point you are ready to create a `config.yml` file.
+
+Details on what goes in the that file can be found [here](../../config/overview.md)

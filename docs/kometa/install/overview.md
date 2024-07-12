@@ -66,6 +66,15 @@ python kometa.py
 
 ## Docker Install Overview
 
+### General Docker requirements
+
+In generic terms, what you will do to install Kometa in *any* docker context, whether that is Docker on your computer, any NAS, some remote server, etc., is:
+
+1. create a container that has some folder mapped into it at `/config`
+2. create your config file in the folder you chose in step 1.
+
+That is all Kometa requires with regard to Docker.  Every NAS has a different idea of how to do those things, but conceptually that is all you have to do.  The wiki provides some walkthroughs for a few NAS, but it is impractical to document every version of every NAS with screenshots and walkthroughs.
+
 ### Docker Run:
 
 ```shell

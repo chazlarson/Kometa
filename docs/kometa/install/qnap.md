@@ -8,6 +8,13 @@ The "Container Station" UI on your QNAP may differ from these screenshots, but t
 2. Set environment variables to control the container's behavior [optional].
 3. Point the container to the directory where your configuration files are to be stored.
 
+This walkthrough does not discuss creating the configuration file.  It only covers getting the container set up.
+
+There are walkthroughs available that will take you through the creation of a basic config file here:
+
+1. [local](../install/local.md)
+2. [Docker](../install/docker.md)
+
 Detailed steps:
 
 === "Container Station v. 3.0.5.623"
@@ -100,8 +107,6 @@ Detailed steps:
     
     13. Select Finish
 
-    This code will create a tabbed content section with the provided content, correctly indented and numbered, in your MkDocs documentation.
-
 === "Container Station v. unknown"
 
     1. Open Container Station; click "Create" in the left column.
@@ -162,3 +167,6 @@ Detailed steps:
         ![](images/qnap7.png)
 
 
+At this point you are ready to create a `config.yml` file.
+
+Details on what goes in the that file can be found [here](../../config/overview.md)
