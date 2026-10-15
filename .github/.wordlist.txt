@@ -193,6 +193,9 @@ LinuxServer
 Linuxserver
 linuxserver
 linuxserver's
+Listrr
+listrr
+Listrr's
 localhost
 lookups
 Looper
@@ -456,4 +459,5 @@ YamTrack
 YML
 yml
 Yozora
+ytmusic
 YYYY

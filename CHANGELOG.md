@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add a read-only `listrr_list` / `listrr_list_details` builder for Listrr movie and show lists. It uses an optional `listrr.api_key` and reads list membership from the Listrr API.
 - Add Last.fm connector and various music builders.
+- Add YouTube Music builders for music libraries and operation for updating artist images
 - Log the current value when an item or episode rating already matches the requested rating.
 - Add `seasons: {latest: true}` filtering against the highest-numbered Plex season, excluding Specials.
 - Add an artist-level Lidarr connector with global or per-library configuration, quality-profile and monitoring updates, tag add/remove/sync support, cached successful additions, and `lidarr_add_all_existing` / `lidarr_remove_by_tag` library operations. Plex artists are added only when their metadata contains one valid MusicBrainz artist ID.
@@ -17,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- Say that an unconfigured `listrr_list` or `listrr_list_details` builder requires Listrr to be configured, matching the other service builders.
+- Read several `listrr_list` values as one builder so playlists and `collection_order: custom` can combine Listrr lists, and keep a Listrr timeout, rate limit, or blank API key from stopping the rest of the run.
+- Accept `stinger_rating` filters and all numeric modifiers for collections and overlays, including negative integer thresholds. #3732
 - Normalize typographic dash variants when matching music artist, album, and track names, so names such as `Sophie Ellis-Bextor` match Plex's `Sophie Ellis‐Bextor` when the result is unique.
 - Add the existing `plex_bulk_edit_batch_size` operation to the configuration schema.
 - Cache IMDb direct ratings locally. Library load batch-fetches that library's IMDb ids from Kometa Utilities `POST /ratings` and reuses them until `cache_expiration`; later direct rating lookups read the cache, and misses are batched instead of requested one title at a time.
